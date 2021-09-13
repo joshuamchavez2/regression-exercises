@@ -85,6 +85,15 @@ def remove_outliers(df, k, col_list):
         df = df[(df[col] > lower_bound) & (df[col] < upper_bound)]
         
     return df
+    
+    #for exploration
+def prepare_zillow_exploration(df):
+    #Clean
+    #not scaled
+    #is split for exploring in "TRAIN"
+    return "needs work"
+
+
 
 def prepare_zillow(df):
     ''' Prepare zillow data for exploration'''
@@ -124,7 +133,7 @@ def prepare_zillow(df):
     return train, validate, test 
 
 def wrangle_zillow():
-
+    # For modeling
     train, validate, test = prepare_zillow(acquire_zillow())
     
     return train, validate, test
